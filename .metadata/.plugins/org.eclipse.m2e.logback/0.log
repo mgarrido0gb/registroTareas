@@ -757,3 +757,7 @@ org.eclipse.jdt.core.JavaModelException: build/classes/models [in Tareas] is not
 2024-05-21 17:16:13,581 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\main\resources
 2024-05-21 17:16:13,582 [Worker-88: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2024-05-21 17:16:13,582 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\test\resources
+2024-05-21 17:21:19,717 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 17:21:19,718 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\main\resources
+2024-05-21 17:21:19,719 [Worker-89: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 17:21:19,720 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\test\resources

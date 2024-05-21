@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registro Tareas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style type="text/css">
     	body{
     		background-color: white;
@@ -19,10 +22,28 @@
     		color: black;
     	}
     	
-    	.logotipo{
-    		width: 30px;
-    		height: 30px;
+    	#titulo ,h1{
+    		font-family: "Kanit", static;
     	}
+    	
+    	#titulo{
+  			color: transparent;
+    		background-image: linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700);    
+    		background-clip: text;
+    		animation: color 3s linear infinite;
+    		background-size: 500%;    
+
+    	}
+    	
+    	@keyframes color {
+    		from {
+       			 background-position: 0% 50%;
+    		}
+
+    		to {
+        		background-position: 100% 50%;
+    		}
+		}
     	
     	
     
@@ -33,14 +54,17 @@
 
   </head>
   <body>
-  	<nav class="navbar bg-primary" id="nav">
-  		<div class="container">
-    		<a class="navbar-brand" href="#">
-      			<img src="https://cdn-icons-png.flaticon.com/512/181/181627.png"  width="40" height="40">
-    		</a>
-  		</div>
+  	<%
+  		ArrayList<Categoria> cats = (ArrayList<Categoria>)request.getAttribute("cats"); 
+  		ArrayList<Tarea> tareas = (ArrayList<Tarea>)request.getAttribute("tareas");
+  	
+  	%>
+  	<nav class="navbar navbar-expand-lg bg-black">
+    	<div class="container-fluid">
+        	<a class="navbar-brand mx-auto " id="titulo" href="#">Registro de Tareas</a>
+    	</div>
 	</nav>
-    <% ArrayList<Categoria> cats = (ArrayList<Categoria>)request.getAttribute("cats"); %>
+
     <div class="container">
     	<div class="row justify-content-center">
         	<div class="col-12 col-md-9 col-lg-6">
@@ -77,14 +101,12 @@
     
    <div class="row">
    		<div class="col-6 offset-3 d-block m-auto m-0 p-2 col-md-3">
-   			 <%
-    			ArrayList<Tarea> tareas = (ArrayList<Tarea>)request.getAttribute("tareas");
-    		%>
+
  
     			<% for (Tarea t: tareas) { %>
     				<ul class="list-group text-center">
     					<li <% if (t.completada == true){ %>class="text-decoration-line-through text-danger"<% } %> class="list-group-item text-center">
-    		 				<h5>Agregada el: <%=t.fecha %></h5> 
+    		 				<h5>Agregada el: <%=t.fecha %></h5>
     		 				<h6 class="text-center">(<%=t.texto%>)</h6>
     		 				<a href="/Tareas/CheckearTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=sz8cPVwzLrMP&format=png" class="logotipo" onclick="check()" ></img></a>
     		 				<a href="/Tareas/GestionTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=pre7LivdxKxJ&format=png" class="logotipo" onclick="eliminar()"></img></a>

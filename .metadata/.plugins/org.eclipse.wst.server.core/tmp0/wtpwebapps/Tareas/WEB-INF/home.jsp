@@ -47,13 +47,14 @@
             	<form action="/Tareas/Home" method="post">
                 	<div class="p-4">
                     	<h1 class="text-center">Ingrese una Tarea</h1>
+                    	<br>
                     	<div class="form-group">
                         	<input class="form-control" placeholder="Nombre de tarea" name="texto" type="text" required>
                     	</div>
                     	<br>
                     	<div class="col-12">
               				<select class="form-select" name="categoria_id" required>
-                				<option selected value>Selecciona 1</option>
+                				<option selected value required>Selecciona 1</option>
                 					<% for (Categoria c: cats) { %>
                 						<option value="<%=c.id %>"><%=c.nombre %></option>
                 					<% } %>
@@ -83,7 +84,8 @@
     			<% for (Tarea t: tareas) { %>
     				<ul class="list-group text-center">
     					<li <% if (t.completada == true){ %>class="text-decoration-line-through text-danger"<% } %> class="list-group-item text-center">
-    		 				<%=t.texto %> (creada en: <%=t.fecha %>)
+    		 				<h5>Agregada el: <%=t.fecha %></h5> 
+    		 				<h6 class="text-center">(<%=t.texto%>)</h6>
     		 				<a href="/Tareas/CheckearTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=sz8cPVwzLrMP&format=png" class="logotipo" onclick="check()" ></img></a>
     		 				<a href="/Tareas/GestionTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=pre7LivdxKxJ&format=png" class="logotipo" onclick="eliminar()"></img></a>
     					</li>

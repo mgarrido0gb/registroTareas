@@ -58,7 +58,7 @@ public class TareaDao {
 		Connection conn = MyConn.getConnection();
 		// 3. Creamos y ejecutamos la consulta
 		Statement consulta = conn.createStatement();
-		ResultSet respuesta = consulta.executeQuery("select * from tareas");
+		ResultSet respuesta = consulta.executeQuery("select * from tareas ");
 		
 		// 4. Vamos llenando el ArrayList con lo que tenga la respuesta
 		while (respuesta.next()) {
@@ -86,6 +86,7 @@ public class TareaDao {
 					respuesta.getString("texto"),
 					respuesta.getBoolean("completada"),
 					respuesta.getDate("fecha")
+					
 					
 			);
 		  tareas.add(t);

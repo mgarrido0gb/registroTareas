@@ -9,12 +9,14 @@ public class Tarea extends Categoria {
 	public boolean completada;
 	public Date fecha;
 	
-	public Tarea(int id, String texto, boolean completada, Date fecha) {
+	public Tarea(int id, String texto, boolean completada, Date fecha ) {
 		super(id, texto);
 		this.id = id;
 		this.texto = texto;
 		this.completada = completada;
 		this.fecha = fecha;
+
+
 	}
 
 	

@@ -1,7 +1,7 @@
 package models;
 import java.util.Date;
 
-public class Tarea {
+public class Tarea extends Categoria {
 	public int id;
 	
 
@@ -10,7 +10,7 @@ public class Tarea {
 	public Date fecha;
 	
 	public Tarea(int id, String texto, boolean completada, Date fecha) {
-		super();
+		super(id, texto);
 		this.id = id;
 		this.texto = texto;
 		this.completada = completada;

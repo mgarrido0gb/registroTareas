@@ -40,7 +40,7 @@
     		</a>
   		</div>
 	</nav>
-    
+    <% ArrayList<Categoria> cats = (ArrayList<Categoria>)request.getAttribute("cats"); %>
     <div class="container">
     	<div class="row justify-content-center">
         	<div class="col-12 col-md-9 col-lg-6">
@@ -50,14 +50,28 @@
                     	<div class="form-group">
                         	<input class="form-control" placeholder="Nombre de tarea" name="texto" type="text" required>
                     	</div>
+                    	<br>
+                    	<div class="col-12">
+              				<select class="form-select" name="categoria_id" required>
+                				<option selected value>Selecciona 1</option>
+                					<% for (Categoria c: cats) { %>
+                						<option value="<%=c.id %>"><%=c.nombre %></option>
+                					<% } %>
+              				</select>
+     					</div>
                     	<div class="text-center mt-3">
                         	<input type="submit" value="Guardar" class="btn btn-primary" onclick="mensaje()">
                     	</div>
                 	</div>
+                	
             	</form>
         	</div>
     	</div>
 	</div>
+	
+	
+	
+	
     
     
    <div class="row">

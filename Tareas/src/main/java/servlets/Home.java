@@ -60,8 +60,9 @@ public class Home extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String textoNuevaTarea = request.getParameter("texto");
+		int categoria_id = Integer.parseInt(request.getParameter("categoria_id"));
 		try {
-			TareaDao.addNew(textoNuevaTarea);
+			TareaDao.addNew(textoNuevaTarea,categoria_id);
 	
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -13,12 +13,13 @@ import models.Tarea;
 
 public class TareaDao {
 	
-	static public void addNew(String textoNuevaTarea) throws SQLException {
+	static public void addNew(String textoNuevaTarea, int categoria_id) throws SQLException {
 		//1.-  nueva conexion
 		Connection conn = MyConn.getConnection();
 		//2.- consulta
-		PreparedStatement consulta =conn.prepareStatement("INSERT INTO TAREAS (texto) values(?)");
+		PreparedStatement consulta =conn.prepareStatement("INSERT INTO TAREAS (texto,categoria_id) values(?,?)");
 		consulta.setString(1, textoNuevaTarea);
+		consulta.setInt(2, categoria_id);
 		consulta.execute();
 	}
 	

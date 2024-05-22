@@ -45,9 +45,15 @@
     		}
 		}
     	
-    	
+    	a:hover:after {
+    		background-color: #333;
+    		color: #fff;
+    		padding: 4px 8px;
+    		border-radius: 4px;
+    		position: absolute;
     
-    	
+		}
+  
     	
     
     </style>
@@ -70,7 +76,7 @@
         	<div class="col-12 col-md-9 col-lg-6">
             	<form action="/Tareas/Home" method="post">
                 	<div class="p-4">
-                    	<h1 class="text-center">Ingrese una Tarea</h1>
+                    	<h1 class="text-center fs-1">Ingrese una Tarea</h1>
                     	<br>
                     	<div class="form-group">
                         	<input class="form-control" placeholder="Nombre de tarea" name="texto" type="text" required>
@@ -106,10 +112,22 @@
     			<% for (Tarea t: tareas) { %>
     				<ul class="list-group text-center">
     					<li <% if (t.completada == true){ %>class="text-decoration-line-through text-danger"<% } %> class="list-group-item text-center">
-    		 				<h5>Agregada el: <%=t.fecha %></h5>
-    		 				<h6 class="text-center">(<%=t.texto%>)</h6>
-    		 				<a href="/Tareas/CheckearTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=sz8cPVwzLrMP&format=png" class="logotipo" onclick="check()" ></img></a>
-    		 				<a href="/Tareas/GestionTarea?id=<%=t.id%>"><img src="https://img.icons8.com/?size=48&id=pre7LivdxKxJ&format=png" class="logotipo" onclick="eliminar()"></img></a>
+    		 				<h4>Agregada el: <%=t.fecha %></h4>
+    		 				<h6 class="text-center">Tarea: (<%=t.texto%>)</h6>
+    		 				
+    	
+                			<% for (Categoria c: cats) { %>
+                					<% if(t.categoria_id == c.id){ %>
+                							<h5>Categoría: <%=c.nombre %></h5>
+                					<%} %>
+                			<% } %>
+    		 				
+    		 				<a href="/Tareas/CheckearTarea?id=<%= t.getId() %>" title="Checkear Tarea">
+    							<img src="https://img.icons8.com/?size=48&id=sz8cPVwzLrMP&format=png" class="logotipo" onclick="check()"></img>
+							</a>
+    		 				<a href="/Tareas/GestionTarea?id=<%=t.getId()%>" title="Eliminar Tarea">
+    		 					<img src="https://img.icons8.com/?size=48&id=pre7LivdxKxJ&format=png" class="logotipo" onclick="eliminar()"></img>
+    		 				</a>
     					</li>
     				<br>
     			<%}%>

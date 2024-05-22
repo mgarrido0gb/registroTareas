@@ -1469,3 +1469,11 @@ org.eclipse.jdt.core.JavaModelException: build/classes/models [in Tareas] is not
 2024-05-21 20:13:02,365 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\main\resources
 2024-05-21 20:13:02,365 [Worker-150: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2024-05-21 20:13:02,365 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\test\resources
+2024-05-21 20:14:31,496 [Worker-141: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 20:14:31,496 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\main\resources
+2024-05-21 20:14:31,497 [Worker-141: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 20:14:31,497 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\test\resources
+2024-05-21 20:15:04,475 [Worker-149: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 20:15:04,475 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\main\resources
+2024-05-21 20:15:04,476 [Worker-149: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2024-05-21 20:15:04,476 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Computador\Desktop\MatiasFigueroa-NoBorrar\Tareas\src\test\resources

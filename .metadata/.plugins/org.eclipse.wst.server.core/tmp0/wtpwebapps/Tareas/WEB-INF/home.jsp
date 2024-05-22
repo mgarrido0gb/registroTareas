@@ -119,6 +119,7 @@
                 			<% for (Categoria c: cats) { %>
                 					<% if(t.categoria_id == c.id){ %>
                 							<h5>Categoría: <%=c.nombre %></h5>
+                							
                 					<%} %>
                 			<% } %>
     		 				

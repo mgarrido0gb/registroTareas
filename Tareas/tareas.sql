@@ -17,4 +17,4 @@ CREATE TABLE tareas(
     categoria_id integer references categorias(id)
 );
 
-select * from tareas join categorias ON categorias.id = tareas.categoria_id;
+select texto,completada,fecha,categorias.nombre from tareas join categorias ON categorias.id = tareas.categoria_id;
